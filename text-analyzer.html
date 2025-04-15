@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Analyzer | Divy G</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="text-analyzer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="retro-title">TEXT ANALYZER</h1>
+            <p class="tagline">Analyze text content with precision</p>
+            
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="terminal-title">SYSTEM.EXE</div>
+                </div>
+                <div class="terminal-body">
+                    <p><span class="terminal-prompt">C:\></span> DATE</p>
+                    <p class="terminal-output">2025-04-15 08:43:31</p>
+                    <p><span class="terminal-prompt">C:\></span> WHOAMI</p>
+                    <p class="terminal-output">DivyG007</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="text-analyzer.html" class="active">Text Analyzer</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <div class="analyzer-container">
+                <div class="input-section">
+                    <h2>Enter Text</h2>
+                    <p class="instruction">Paste or type text with more than 10,000 words for analysis</p>
+                    
+                    <textarea id="textInput" placeholder="Enter your text here..." rows="15"></textarea>
+                    
+                    <div class="controls">
+                        <button id="analyzeBtn" class="analyze-btn">Analyze Text</button>
+                        <button id="clearBtn" class="clear-btn">Clear</button>
+                        <button id="sampleBtn" class="sample-btn">Load Sample Text</button>
+                    </div>
+                </div>
+                
+                <div class="results-section">
+                    <h2>Analysis Results</h2>
+                    
+                    <div class="result-block" id="basicStats">
+                        <h3>Basic Statistics</h3>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-label">Letters:</span>
+                                <span class="stat-value" id="letterCount">0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Words:</span>
+                                <span class="stat-value" id="wordCount">0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Spaces:</span>
+                                <span class="stat-value" id="spaceCount">0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Newlines:</span>
+                                <span class="stat-value" id="newlineCount">0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Special Symbols:</span>
+                                <span class="stat-value" id="specialCount">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="result-block">
+                        <h3>Pronouns</h3>
+                        <div id="pronounResults" class="word-counts">
+                            <p class="no-results">Results will appear here after analysis</p>
+                        </div>
+                    </div>
+                    
+                    <div class="result-block">
+                        <h3>Prepositions</h3>
+                        <div id="prepositionResults" class="word-counts">
+                            <p class="no-results">Results will appear here after analysis</p>
+                        </div>
+                    </div>
+                    
+                    <div class="result-block">
+                        <h3>Indefinite Articles</h3>
+                        <div id="articleResults" class="word-counts">
+                            <p class="no-results">Results will appear here after analysis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="copyright">&copy; 2025 Divy G. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="text-analyzer.js"></script>
+</body>
+</html>
